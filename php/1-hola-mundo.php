@@ -23,3 +23,5 @@ echo gettype($my_double)."\n";
 $my_bool = true;
 echo $my_bool."\n";
 echo gettype($my_bool);
+
+echo "todo ok";
