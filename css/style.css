@@ -1,0 +1,21 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: blueviolet;
+}
+h2{
+    color: #40D2B4;
+}
+h6{
+    font-size: 12px;
+    color: chocolate;
+
+}
+section{
+    background-color: #3C445A;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
