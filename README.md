@@ -1,4 +1,4 @@
-# Curso de PHP by Hector Ferro Dávalos
+# Curso de PHP de: Hector Ferro Dávalos
 aquí almacenaré mi aprendizaje para es curso de PHP de la Universidad
 aquí habrá una lista de lo que aprenderemos dentro del curso 
 * ## PHP
@@ -51,7 +51,7 @@ echo '<br>';
 echo gettype($nombre);
 ```
 ## Constantes
-Las constantes suele declararse en MAYÚSCULAS
+Las constantes suelen declararse en MAYÚSCULAS
 ```php
 define('PULGADA',0.393701);
 define('LIBRA',2.20462);
@@ -197,12 +197,12 @@ if ($pais == "Mexico"||$pais == "España"||$pais == "Peru") {
 }
 ```
 #### Ternarios
-*Para que un alumno domine una asignatura debe sacar mas de 14 en la nota definitiva, caso contrario no aprendió nada
+*Para que un alumno domine una asignatura debe sacar mas de 14 en la nota definitiva, caso contrario no aprendió nada*
 ```php$nota =  14;
 echo ($nota  > 13 ? 'aprobaste el curso satisfactoriamente':'no aprendiste nada');
 echo '<br>';
 ```
- pierde la asignatura*
+
 #### Switch
 *Realiza un programa que imprime cual es tu color favorito, mostrar un ejemplo*
 ```php
