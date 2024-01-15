@@ -1,1 +1,6 @@
 php -S localhost:8001
+clases
+    localhost:8001/class/01-intro.php
+aprendizaje
+iconos
+    https://www.w3schools.com/icons/fontawesome5_icons_status.asp

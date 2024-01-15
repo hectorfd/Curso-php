@@ -30,9 +30,32 @@ if ($pais == "Mexico"||$pais == "España"||$pais == "Peru") {
 }else{
     echo "habla otro idioma";
 }
-//?else
+echo '<br>';
 //?Los ternarios
+/*Para que un alumno gane una asignatura debe sacar
+ mas de 3 en la nota definitiva, caso contrario
+ pierde la asignatura*/
+$nota =  14;
+echo ($nota >13 ? 'aprobaste el curso satisfactoriamente':'no aprendiste nada');
+echo '<br>';
 //?La sentencia Switch
+/*Realiza un programa que imprime cual es tu color favorito,
+mostrar un ejemplo*/
+$variable = 'verde';
+switch ($variable) {
+    case 'marron':
+        echo "tu color favorito es: ". $variable;
+        break;
+    case 'verde':
+        echo "tu color favorito es: ". $variable;
+        break;
+    case 'azul':
+        echo "tu color favorito es: ". $variable;
+        break;
+    default:
+        echo "no se que hiciste xd";
+        break;
+}
 //* condicionales compuestas
 
 ?>
