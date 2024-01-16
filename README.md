@@ -1,5 +1,5 @@
 # Curso de PHP de: Hector Ferro Dávalos
-aquí almacenaré mi aprendizaje para es curso de PHP de la Universidad
+aquí almacenaré mi aprendizaje para este curso de PHP de la Universidad
 aquí habrá una lista de lo que aprenderemos dentro del curso 
 * ## PHP
 Creado por Rasmus Lerdorf en 1994, PHP significa **Hypertext Pre-Processor**, es decir, pre-procesador de hipertexto.
