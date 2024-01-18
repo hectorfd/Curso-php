@@ -26,7 +26,7 @@
             <table border="0" align= "center">
                <tr>
                 <td>Cantidad</td>
-                <td><input type="text" name="txtCantidad"></td>
+                <td><input required type="text" name="txtCantidad"></td>
                </tr>
                <tr>
                 <td></td>
