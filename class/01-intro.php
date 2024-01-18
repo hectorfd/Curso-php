@@ -51,6 +51,25 @@
             //cadena -> "Hector"
         ?>
     </section>
+    <br>
+   
+    <section>
+        <h2>Operadores Aritméticos</h2>
+        <?php
+            //!suma + -> $a + $b
+            //!resta - -> $a - $b
+            //!multi * -> $a * $b
+            //!div / -> $a / $b
+            //!resto o modulo % -> $a % $b
+        ?>
+    </section>
+    <section>
+        <h2>Operadores cadena</h2>
+        <?php
+            //* . punto(paa concatenar y unir valores)
+        
+        ?>
+    </section>
     <footer>
         <h6>Copyright © 2024, todos los derechos reservados </h6>
     </footer>

@@ -1,21 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    
+    font-family: 'Poppins', sans-serif;
+}
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    
 }
 h1{
-    color: blueviolet;
+    color: #263451;
 }
 h2{
-    color: #40D2B4;
+    color: #72ECB1;
+    text-align: center;
 }
 h6{
     font-size: 12px;
     color: chocolate;
+    text-align: center;
 
 }
 section{
-    background-color: #3C445A;
+    background-color: #262335;
     color: white;
     border-radius: 10px;
     padding: 10px;
     
+}
+td{
+    padding: 10px;
+}
+#verde{
+    color: #72ECB1;
+}
+#button{
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+    color: black;
+    background-color: #72ECB1;
+    border-radius: 10px;
+}
+#button2{
+    font-size: 16px;
+    width: 100px;
+    height: 35px;
+    color: black;
+    background-color: #ec7272;
+    border-radius: 10px;
+}
+#button:hover{
+    background-color: azure;
+}
+#button2:hover{
+    background-color: azure;
+}
+strong{
+    font-size: 18px;
+}
+#ancho{
+    width: 400px;
+    height: 30px;
+    font-size: 16px;
+}
+
+#ancho2{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+}
+#ancho3{
+    width: 200px;
+    height: 25px;
+    font-size: 16px;
+    text-align: center;
 }
