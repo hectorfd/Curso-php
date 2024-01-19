@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Caso 2</h1>
+        <h1>Caso 3</h1>
     </header>
     <nav>
         <ul>
@@ -42,9 +42,9 @@
                define("UNITARIO",20.55);
                define("DESCUENTO",0.1);
 
-               $importeCompra = $cantidad * UNITARIO;
-               $descuento = $importeCompra * DESCUENTO;
-               $importeNeto = $importeCompra - $descuento;
+               $sueldo = $cantidad * UNITARIO;
+               $descuento = $sueldo * DESCUENTO;
+               $importeNeto = $sueldo - $descuento;
 
                ?>
                <tr>
@@ -67,7 +67,7 @@
                 <td>Importe de compra</td>
                 <td>
                     <?php
-                        printf("S/. %.2f", $importeCompra);
+                        printf("S/. %.2f", $sueldo);
                     ?>
                 </td>
                </tr>

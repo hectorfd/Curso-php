@@ -40,6 +40,7 @@ td{
     color: black;
     background-color: #72ECB1;
     border-radius: 10px;
+    margin-right: 10px;
 }
 #button2{
     font-size: 16px;
@@ -51,9 +52,12 @@ td{
 }
 #button:hover{
     background-color: azure;
+    cursor: pointer;
+    
 }
 #button2:hover{
     background-color: azure;
+    cursor: pointer;
 }
 strong{
     font-size: 18px;
@@ -73,5 +77,8 @@ strong{
     width: 200px;
     height: 25px;
     font-size: 16px;
+    text-align: center;
+}
+.centrar{
     text-align: center;
 }
