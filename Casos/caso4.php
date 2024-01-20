@@ -74,7 +74,7 @@
                </tr>
                <tr>
                 <td></td>
-                <td><input type="submit" value="Procesar" id="button"> <button id="button2" type="reset">Limpiar</button></td>
+                <td><input type="submit" value="Procesar" id="button"> <button id="button2" type="reset"><a href="caso4.php">Limpiar</a></button></td>
                </tr>
                <tr>
                 <td>Sueldo</td>
