@@ -51,14 +51,14 @@
                         break;
                 }
             ?>
-            <div class="centrar"><img src="../images/jefes.jpg" alt="" width="450px"></div>
+            <div class="centrar"><img src="../images/jefes.png" alt="" width="350px"></div>
                <tr>
                 <td>Empleado</td>
                 <td><input required type="text" name="txtEmpleado" value="<?php echo $empleado;?>"></td>
                </tr>
                <tr>
                 <td>Horas</td>
-                <td><input required type="text" name="txtHoras" value="<?php echo $horas;?>"></td>
+                <td><input required type="number" name="txtHoras" value="<?php echo $horas;?>" id="ancho2"></td>
                </tr>
                <tr>
                 <td>Categoría</td>
@@ -92,5 +92,6 @@
     <footer>
         <h6>HectorFD Copyright © 2024, todos los derechos reservados </h6>
     </footer>
+    
 </body>
 </html>
