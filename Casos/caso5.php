@@ -28,9 +28,9 @@
                     $ticket = 1;
                 }
                 if ($ticket < 1 or $ticket > 20) {
-                    //$mensaje = "Ticket no valido.!!";
-                    //echo "<script>alert('$mensaje');</script>";
-                    echo "<script>Swal.fire({title: '¡Bien hecho!',text: '¡Has hecho clic!',icon: 'success',confirmButtonText: 'OK'});</script>";
+                    $mensaje = "Ticket no valido.!!";
+                    echo "<script>alert('$mensaje');</script>";
+                    //echo "<script>Swal.fire({title: '¡Bien hecho!',text: '¡Has hecho clic!',icon: 'success',confirmButtonText: 'OK'});</script>";
                     
                 }elseif ($ticket >= 1 and $ticket <= 4) {
                     $descuento = $total - ($total * 0.16);
@@ -93,6 +93,7 @@
     <footer>
         <h6>HectorFD Copyright © 2024, todos los derechos reservados </h6>
     </footer>
+    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
