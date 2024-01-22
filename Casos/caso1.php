@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../html/css/style.css">
     <title>CAso 1</title>
     
 </head>
 <body>
     <header>
         <h1>Caso 1</h1>
+        <div class="wrapper">
+            <div class="select-btn">
+                <span>Selecciona Caso</span>
+                <i class="uil uil-angle-down"></i>
+            </div>
+            <div class="content">
+                <div class="search">
+                    <i class="uil uil-search"></i>
+                    <input type="text" spellcheck="false" placeholder="Buscar">
+                </div>
+                <ul class="options"></ul>
+            </div>
+        </div>
     </header>
     <nav>
-        <ul>
-            <li><a href="caso1.php">caso 1: Casa de Cambios</a></li>
-            <li><a href="caso2.php">caso 2: Pago de Empleados</a></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
     </nav>
     <section>
         <h2>Casa de Cambios</h2>
@@ -154,5 +161,6 @@
              campo.focus();
         }
     </script>
+    <script src="../html/js/script.js"></script>
 </body>
 </html>
