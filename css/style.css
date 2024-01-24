@@ -105,6 +105,13 @@ strong{
     text-align: left;
     padding: 10px;
 }
+#ancho4{
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+    text-align: left;
+    padding: 10px;
+}
 .centrar{
     text-align: center;
 }
