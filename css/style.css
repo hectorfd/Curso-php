@@ -15,6 +15,9 @@ h2{
     color: #72ECB1;
     text-align: center;
 }
+h3{
+    color: #FFD92C;
+}
 h6{
     font-size: 12px;
     color: chocolate;
@@ -111,6 +114,13 @@ strong{
     font-size: 15px;
     text-align: left;
     padding: 10px;
+}
+#ancho5{
+    width: 40px;
+    height: 20px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
 }
 .centrar{
     text-align: center;

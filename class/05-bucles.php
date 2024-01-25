@@ -83,35 +83,22 @@
         // }
         // echo "<br>";
         // anidacion de estrucuras
-        $n = 10;
-        $a = 1;
+        // $n = 10;
+        // $a = 1;
        
-        while ($a <= $n) {
-             $j = 1;
-             while ($j <= $a) {
+        // while ($a <= $n) {
+        //      $j = 1;
+        //      while ($j <= $a) {
                  
-                 $j++;
-                 break;
-             }
-             echo "<br>";
-             $a += 5 ;
+        //          $j++;
+        //          break;
+        //      }
+        //      echo "<br>";
+        //      $a += 5 ;
            
-        }
-        // mostrar en pantalla todolos los numeros pares comprendidos entre 1 y 1000 en filas de 5 numeros, 10 numeros y 15 numeros
-        // for ($i = 1; $i <= 1000; $i++) {
-        //     if ($i % 2 == 0) {
-        //         echo $i . " ";
-        //         if ($i % 5 == 0) {
-        //             echo "<br>";
-        //         }
-        //         if ($i % 10 == 0) {
-        //             echo "<br>";
-        //         }
-        //         if ($i % 15 == 0) {
-        //             echo "<br>";
-        //         }
-        //     }
         // }
+        // mostrar en pantalla todolos los numeros pares comprendidos entre 1 y 1000 en filas de 5 numeros, 10 numeros y 15 numeros
+        // 
         
         // ?>
     </section>
