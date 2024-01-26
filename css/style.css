@@ -17,6 +17,9 @@ h2{
 }
 h3{
     color: #FFD92C;
+    background-color: #263451;
+    padding: 0px;
+    border-radius: 7px;
 }
 h6{
     font-size: 12px;
@@ -95,7 +98,7 @@ strong{
 }
 
 #ancho2{
-    width: 100px;
+    width: 130px;
     height: 30px;
     font-size: 15px;
     text-align: left;
@@ -124,4 +127,9 @@ strong{
 }
 .centrar{
     text-align: center;
+}
+#blanco{
+    background-color: white;
+    color: black;
+
 }
