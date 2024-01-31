@@ -49,8 +49,8 @@
                define("DESCUENTO",0.1);
 
                $sueldo = $cantidad * UNITARIO;
-               $descuento = $sueldo * DESCUENTO;
-               $importeNeto = $sueldo - $descuento;
+               $impuesto = $sueldo * DESCUENTO;
+               $importeNeto = $sueldo - $impuesto;
 
                ?>
                <tr>
@@ -81,7 +81,7 @@
                 <td>Importe de descuento</td>
                 <td>
                     <?php
-                        printf("S/. %.2f", $descuento);
+                        printf("S/. %.2f", $impuesto);
                     ?>
                 </td>
                </tr>

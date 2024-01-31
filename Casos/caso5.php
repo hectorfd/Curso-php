@@ -47,19 +47,19 @@
                     //echo "<script>Swal.fire({title: '¡Bien hecho!',text: '¡Has hecho clic!',icon: 'success',confirmButtonText: 'OK'});</script>";
                     
                 }elseif ($ticket >= 1 and $ticket <= 4) {
-                    $descuento = $total - ($total * 0.16);
+                    $impuesto = $total - ($total * 0.16);
                     $obsequio = "Canasta con productos diversos.";
                 }elseif ($ticket >= 5 and $ticket <= 9) {
-                    $descuento = $total - ($total * 0.13);
+                    $impuesto = $total - ($total * 0.13);
                     $obsequio = "Saco de azúcar de 50kg.";
                 }elseif ($ticket >= 10 and $ticket <= 14) {
-                    $descuento = $total - ($total * 0.06);
+                    $impuesto = $total - ($total * 0.06);
                     $obsequio = "Aceite 5 litros.";
                 }elseif ($ticket >= 15 and $ticket <= 19) {
-                    $descuento = $total - ($total * 0.12);
+                    $impuesto = $total - ($total * 0.12);
                     $obsequio = "Caja de leche de 24 latas grandes.";
                 }elseif ($ticket == 20) {
-                    $descuento = $total - ($total * 0.1);
+                    $impuesto = $total - ($total * 0.1);
                     $obsequio = "Saco de arroz de 50 kg.";
                 }    
                 ?>
@@ -87,7 +87,7 @@
                     <td>Monto a Cancelar</td>
                     <td>
                     <?php
-                        printf("S/. %.2f", $descuento);
+                        printf("S/. %.2f", $impuesto);
                     ?>
                     </td>
                 </tr>

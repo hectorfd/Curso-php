@@ -41,16 +41,16 @@ echo '<br>';
 //?La sentencia Switch
 /*Realiza un programa que imprime cual es tu color favorito,
 mostrar un ejemplo*/
-$variable = 'verde';
-switch ($variable) {
+$lista = 'verde';
+switch ($lista) {
     case 'marron':
-        echo "tu color favorito es: ". $variable;
+        echo "tu color favorito es: ". $lista;
         break;
     case 'verde':
-        echo "tu color favorito es: ". $variable;
+        echo "tu color favorito es: ". $lista;
         break;
     case 'azul':
-        echo "tu color favorito es: ". $variable;
+        echo "tu color favorito es: ". $lista;
         break;
     default:
         echo "no se que hiciste xd";

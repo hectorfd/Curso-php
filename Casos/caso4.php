@@ -65,7 +65,7 @@
                         break;
                 }
             ?>
-            <div class="centrar"><img src="../images/jefes.png" alt="" width="350px"></div>
+            <div class="centrar"><img src="../images/jefes.png" alt="" width="50%"></div>
                <tr>
                 <td>Empleado</td>
                 <td><input required type="text" name="txtEmpleado" value="<?php echo $empleado;?>"></td>

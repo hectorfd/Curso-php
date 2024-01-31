@@ -5,15 +5,15 @@
 $nombre = 'Hector';
 $compra = 300;
 if ($compra < 50) {
-    $descuento = $compra - ($compra * 0.05);
+    $impuesto = $compra - ($compra * 0.05);
 }else if($compra >= 50 and $compra <100){
-    $descuento = $compra - ($compra * 0.1);
+    $impuesto = $compra - ($compra * 0.1);
 }else if($compra >= 100 and $compra <= 250){
-    $descuento = $compra - ($compra * 0.15);
+    $impuesto = $compra - ($compra * 0.15);
 }else if($compra > 250 and $compra < 400){
-    $descuento = $compra - ($compra * 0.2);
+    $impuesto = $compra - ($compra * 0.2);
 }
 echo 'Nombre del cliente: '. $nombre.'<br>';
 echo 'valor de compra sin descuento: '.$compra.'<br>';
-echo 'valor de compra con descuento: '.$descuento.'<br>';
+echo 'valor de compra con descuento: '.$impuesto.'<br>';
 ?>

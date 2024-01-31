@@ -49,55 +49,55 @@
                         $precio = 1200;
                         $subtotal = $precio * $cantidad;
                         if ($subtotal > 10000) {
-                            $descuento = 0.1;
+                            $impuesto = 0.1;
                         }else{
-                            $descuento = 0.05;
+                            $impuesto = 0.05;
                         }
-                        $monto = $subtotal - ($subtotal * $descuento);
+                        $monto = $subtotal - ($subtotal * $impuesto);
                         $selCocina = "selected";
                         break;
                     case '2':
                         $precio = 2500;
                         $subtotal = $precio * $cantidad;
                         if ($subtotal > 10000) {
-                            $descuento = 0.1;
+                            $impuesto = 0.1;
                         }else{
-                            $descuento = 0.05;
+                            $impuesto = 0.05;
                         }
-                        $monto = $subtotal - ($subtotal * $descuento);
+                        $monto = $subtotal - ($subtotal * $impuesto);
                         $selRefri = "selected";
                         break;
                     case '3':
                         $precio = 3200;
                         $subtotal = $precio * $cantidad;
                         if ($subtotal > 10000) {
-                            $descuento = 0.1;
+                            $impuesto = 0.1;
                         }else{
-                            $descuento = 0.05;
+                            $impuesto = 0.05;
                         }
-                        $monto = $subtotal - ($subtotal * $descuento);
+                        $monto = $subtotal - ($subtotal * $impuesto);
                         $selTv = "selected";
                         break;
                     case '4':
                         $precio = 1000;
                         $subtotal = $precio * $cantidad;
                         if ($subtotal > 10000) {
-                            $descuento = 0.1;
+                            $impuesto = 0.1;
                         }else{
-                            $descuento = 0.05;
+                            $impuesto = 0.05;
                         }
-                        $monto = $subtotal - ($subtotal * $descuento);
+                        $monto = $subtotal - ($subtotal * $impuesto);
                         $selLava = "selected";
                         break;
                     case '5':
                         $precio = 700;
                         $subtotal = $precio * $cantidad;
                         if ($subtotal > 10000) {
-                            $descuento = 0.1;
+                            $impuesto = 0.1;
                         }else{
-                            $descuento = 0.05;
+                            $impuesto = 0.05;
                         }
-                        $monto = $subtotal - ($subtotal * $descuento);
+                        $monto = $subtotal - ($subtotal * $impuesto);
                         $selRadio = "selected";
                         break;
                     
@@ -157,7 +157,7 @@
                     <td>Monto de descuento</td>
                     <td>
                     <?php
-                        printf("$. %.2f", $descuento);
+                        printf("$. %.2f", $impuesto);
                     ?>
                     </td>
                 </tr>

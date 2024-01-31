@@ -44,21 +44,21 @@
                  $promedio = $_GET['txtPromedio'];
 
                  if ($promedio <= 12) {
-                    $descuento = 1;
+                    $impuesto = 1;
                  }elseif ($promedio>=13 and $promedio<=15 ) {
-                    $descuento = 0.1;
+                    $impuesto = 0.1;
                  }elseif ($promedio>=16 and $promedio<=17 ) {
-                    $descuento = 0.15;
+                    $impuesto = 0.15;
                  }elseif ($promedio>=18 and $promedio<=19 ) {
-                    $descuento = 0.25;
+                    $impuesto = 0.25;
                  }elseif ($promedio==20 ) {
-                    $descuento = 0.5;
+                    $impuesto = 0.5;
                  }
 
                  switch ($categoria) {
                     case '1':
                         $mensualidad = 850;
-                        $montoDescuento = $mensualidad * $descuento;
+                        $montoDescuento = $mensualidad * $impuesto;
                         $monto = $mensualidad - $montoDescuento;
                         $selA = "selected";
                         $lblAlumno = "registró correctamente al alumno";
@@ -67,7 +67,7 @@
                         break;
                     case '2':
                         $mensualidad = 750;
-                        $montoDescuento = $mensualidad * $descuento;
+                        $montoDescuento = $mensualidad * $impuesto;
                         $monto = $mensualidad - $montoDescuento;
                         $selB = "selected";
                         $lblAlumno = "registró correctamente al alumno";
@@ -76,7 +76,7 @@
                         break;
                     case '3':
                         $mensualidad = 650;
-                        $montoDescuento = $mensualidad * $descuento;
+                        $montoDescuento = $mensualidad * $impuesto;
                         $monto = $mensualidad - $montoDescuento;
                         $selC = "selected";
                         $lblAlumno = "registró correctamente al alumno";
@@ -85,7 +85,7 @@
                         break;
                     case '4':
                         $mensualidad = 500;
-                        $montoDescuento = $mensualidad * $descuento;
+                        $montoDescuento = $mensualidad * $impuesto;
                         $monto = $mensualidad - $montoDescuento;
                         $selD = "selected";
                         $lblAlumno = "registró correctamente al alumno";

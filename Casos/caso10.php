@@ -39,16 +39,16 @@
 
             switch ($cuotas) {
                 case '3':
-                    $descuento = ($monto * 0.05); 
+                    $impuesto = ($monto * 0.05); 
                     break;
                 case '6':
-                    $descuento = ($monto * 0.07);
+                    $impuesto = ($monto * 0.07);
                     break;
                 case '9':
-                    $descuento = ($monto * 0.1);
+                    $impuesto = ($monto * 0.1);
                     break;
                 case '12':
-                    $descuento = ($monto * 0.2);
+                    $impuesto = ($monto * 0.2);
                     break;
                 default:
                     $impuesto = 1;
@@ -78,7 +78,7 @@
                         <?php
                         $nCuotas = 12;
                         $a = 3;
-                        for ($i=1; $i < 12 ; $i+=3) { 
+                        for ($i=1; $i <= 12 ; $i+=3) { 
                             echo "<option value='$a'>$a</option>";
                             $a += 3;
                         }
@@ -109,7 +109,7 @@
                 </tr>
                 
                 <?php
-                    $monto = $monto + $descuento;
+                    $monto = $monto + $impuesto;
                     $fecha = date("d-m-Y");
                     for ($i=1; $i <= $cuotas ; $i++) { 
                         echo "<tr>";
