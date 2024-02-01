@@ -43,41 +43,66 @@
             error_reporting(0);
             $lista = $_GET['txtLista'];
             $variable = $_GET['txtVariable'];
-            if ($variable==null) {
-                $variable = null;
+            
+            // if (is_numeric($variable)) {
+            //     settype($variable, "integer");
+            // }
+            if (is_numeric($variable)) {
+                if (strpos($variable, ".") !== false) {
+                    $dato = (double) $variable;
+                } elseif (strpos($variable, ".") === false) {
+                    $dato = (integer) $variable;
+                }
+            }else {
+                $dato = (string)$variable;
+                if (strpos($variable, ">") !== false) {
+                    $dato = (boolean)$variable;
+                }
+                if (strpos($variable, "<") !== false) {
+                    $dato = (boolean)$variable;
+                }
+                if (strpos($variable, "<=") !== false) {
+                    $dato = (boolean)$variable;
+                }
+                if (strpos($variable, ">=") !== false) {
+                    $dato = (boolean)$variable;
+                }
+                if (strpos($variable, "!=") !== false) {
+                    $dato = (boolean)$variable;
+                }
             }
-            if (filter_var($variable, FILTER_VALIDATE_INT) !== false) {
-                echo "Es un número entero.";
-            } else {
-                echo "No es un número entero.";
-            }
-
+            
+            
+           
             switch ($lista) {
                 case '1':
-                    $funcion = 'Función isset';
-                    if (isset($variable)) {
+                    $funcion = 'Función isset ';
+                    if (isset($dato)) {
                         $resultado = 'La variable esta definida';
                     }else {
                         $resultado = 'La variable no esta definida';
                     }
+                    $descripción = 'indica si una funcion esta definida o no';
                     $sel1 = "selected";
                     break;
                 case '2':
                     $funcion = 'Función Unset';
-
                     unset($variable);
                     $resultado = 'se elimino esta variable';
-
+                    $descripción = 'elimina la variable, Liberando el espacio en memoria';
                     $sel2 = "selected";
                     break;
                 case '3':
                     $funcion = 'Función Gettype';
-                    $resultado =  gettype($variable);
+                    $resultado = gettype($dato);
+                    $descripción = 'Retorna el tipo de dato de la variable proporcionada';
                     $sel3 = "selected";
                     break;
                  case '4':
                     $funcion = 'Función settype';
-                    $resultado =  settype($variable, "integer").' Se cambio a entero la variable';
+                    settype($dato, "integer");
+                    $resultado = ' Se cambio a entero resultado: '.$dato;
+                    $descripción = 'por falta de presupuesto y tiempo solo cambiaremos el valor a entero xd';
                     $sel4 = "selected";
                     break;
                 case '5':
@@ -88,32 +113,34 @@
                     } else {
                         $resultado = "La variable no está vacía";
                     }
+                    $descripción = 'Verifica si una variable está vacía';
                     $sel5 = "selected";
                     break;
                  case '6':
                     $funcion = 'Función is_integer';
-                    $num = $variable;
-                    if (is_integer($num)) {
-                        $resultado = "La variable $num es un entero.";
+                    
+                    if (is_integer($dato)) {
+                        $resultado = "el valor $dato es un entero.";
                     } else {
-                        $resultado = "La variable $num no es un entero.";
+                        $resultado = "el valor $dato no es un entero.";
                     }
+                    $descripción = 'Determina si el tipo de una variable es un entero';
                     $sel6 = "selected";
                     break;
                  case '7':
                     
                     $funcion = 'Función is double';
-                    if (is_double($variable)) {
+                    if (is_double($dato)) {
                         $resultado = "La variable es un flotante.";
                     } else {
-                        $resultado = "La variable no es un flotante porque esta en una caja de texto.";
+                        $resultado = "La variable no es un flotante.";
                     }
                     $sel7 = "selected";
                     break;
                 case '8':   
-                    $funcion = 'Función is double';
-                    if (is_string($variable)) {
-                        $resultado = "La variable es un String porque esta en una caja de texto.";
+                    $funcion = 'Función is String';
+                    if (is_string($dato)) {
+                        $resultado = "La variable es un String.";
                     } else {
                         $resultado = "La variable no es un String.";
                     }
@@ -125,43 +152,40 @@
                         $variable = $_GET['txtVariable'];
                         var_dump($variable);
                     }                   
-                    
                     $sel9 = "selected";
                     break;
                 
                 default:
-                    # code...
+                    $resultado ='ocurrio un error';
                     break;
             }
-
             ?>
             <fieldset>
             <legend>Formulario</legend>
                 <table align="center">
                     <tr>
                         <td>Variable</td>
-                        <td><input type="text" name="txtVariable" id="ancho" value="<?php echo $variable?>"></td>
+                        <td><input type="text" name="txtVariable" id="ancho" value="<?php echo $variable;?>"></td>
                         <td></td>
                     </tr>
             
                 <tr>
-                    <td>Monto prestado</td>
+                    <td>Funcion</td>
                     <td>
                     <select name="txtLista">
-                        <option value="1" <?php echo $sel1;?>>Función isset</option>
-                        <option value="2" <?php echo $sel2;?>>Función Unset</option>	
-                        <option value="3" <?php echo $sel3;?>>Función Gettype</option>
-                        <option value="4" <?php echo $sel4;?>>Función settype</option>
-                        <option value="5" <?php echo $sel5;?>>Función empty</option>
-                        <option value="6" <?php echo $sel6;?>>Función is_integer</option>
-                        <option value="7" <?php echo $sel7;?>>Función is double</option>
-                        <option value="8" <?php echo $sel8;?>>Función is_string</option>
-                        <option value="9" <?php echo $sel9;?>>Función var _dump</option>
+                        <option value="1" <?php echo $sel1;?>>1. Función isset</option>
+                        <option value="2" <?php echo $sel2;?>>2. Función Unset</option>	
+                        <option value="3" <?php echo $sel3;?>>3. Función Gettype</option>
+                        <option value="4" <?php echo $sel4;?>>4. Función settype</option>
+                        <option value="5" <?php echo $sel5;?>>5. Función empty</option>
+                        <option value="6" <?php echo $sel6;?>>6. Función is_integer</option>
+                        <option value="7" <?php echo $sel7;?>>7. Función is double</option>
+                        <option value="8" <?php echo $sel8;?>>8. Función is_string</option>
+                        <option value="9" <?php echo $sel9;?>>9. Función var _dump</option>
                                
                 </select>
-
                     </td>
-                    <td></td>
+                    <td><?php echo $descripción;?></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -201,149 +225,7 @@
        
     </section>
     <br><br>
-    <section>
-        <h2>Funciones para variables</h2>
-        <form action="">
-            <?php
-            error_reporting(0);
-            $lista2 = $_GET['txtLista2'];
-            $variable2 = $_GET['txtVariable2'];
-            if ($variable2==null) {
-                $variable2 = null;
-            }
-
-            switch ($lista2) {
-                case '1':
-                    $funcion = 'Función isset';
-                   
-                    $sel1 = "selected";
-                    break;
-                case '2':
-                    $funcion = 'Función Unset';
-
-                    
-
-                    $sel2 = "selected";
-                    break;
-                case '3':
-                    $funcion = 'Función Gettype';
-                    
-                    $sel3 = "selected";
-                    break;
-                 case '4':
-                    $funcion = 'Función settype';
-                    
-                    $sel4 = "selected";
-                    break;
-                case '5':
-                    $funcion = 'Función empty';
-
-                    
-                    $sel5 = "selected";
-                    break;
-                 case '6':
-                    
-                    $funcion = 'Función is_integer';
-                    
-                    $sel6 = "selected";
-                    break;
-                 case '7':
-                    
-                    $funcion = 'Función is double';
-                    
-                    $sel7 = "selected";
-                    break;
-                case '8':   
-                    $funcion = 'Función is double';
-                   
-                    $sel8 = "selected";
-                    break;
-                case '9':   
-                    $funcion = 'Función var _dump';
-                                     
-                    
-                    $sel9 = "selected";
-                    break;
-                
-                default:
-                    # code...
-                    break;
-            }
-
-            ?>
-            <fieldset>
-            <legend>Formulario</legend>
-                <table align="center">
-                    <tr>
-                        <td>Variable</td>
-                        <td><input type="text" name="txtVariable2" id="ancho" value="<?php echo $variable2?>"></td>
-                        <td></td>
-                    </tr>
-            
-                <tr>
-                    <td>Monto prestado</td>
-                    <td>
-                    <select name="txtLista2">
-                    <option value="1" <?php echo $selstrlen;?>>Función strlen</option>
-                        <option value="2" <?php echo $selstrpos;?>>Función strpos</option>	
-                        <option value="3" <?php echo $selstrcmp;?>>Función strcmp</option>
-                        <option value="4" <?php echo $selstrstr;?>>Función strstr</option>
-                        <option value="5" <?php echo $selsubstr;?>>Función substr</option>
-                        <option value="6" <?php echo $selltrim;?>>Función ltrim</option>
-                        <option value="7" <?php echo $selrtrim;?>>Función rtrim</option>
-                        <option value="8" <?php echo $selchop;?>>Función chop</option>
-                        <option value="9" <?php echo $sel9trim;?>>Función trim</option>
-                        <option value="10" <?php echo $selstr_replace;?>>Función str_replace</option>
-                        <option value="11" <?php echo $selstrtolower;?>>Función strtolower</option>
-                        <option value="12" <?php echo $selstrtoupper;?>>Función strtoupper</option>
-                        <option value="13" <?php echo $selpreg_match;?>>Función preg_match</option>
-                        <option value="14" <?php echo $selexplode;?>>Función explode</option>
-                        <option value="15" <?php echo $selstrrev;?>>Función strrev</option>
-                        <option value="16" <?php echo $selstr_repeat;?>>Función str_repeat</option>
-                        <option value="17" <?php echo $selstr_pad;?>>Función str_pad</option>
-                               
-                </select>
-
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" id="button" value="Mostrar"></td>
-                    <td></td>
-                </tr>
-            
-            </table>
-        </fieldset>
-        <fieldset id="blanco">
-                <legend><h3>Resultado</h3></legend>
-            <table align = "center">
-                <tr>
-                    <td>Función</td>
-                    <td>Resultado</td>
-                    <td></td>
-                </tr>
-                <?php
-
-                    echo "<tr>";
-                        echo "<td>";
-                        echo $funcion2;
-                        echo "</td>";
-                        echo "<td>";
-                        echo $resultado2;
-                        echo "</td>";
-                        echo "<td>";
-                        
-                        echo "</td>";
-                    echo "</tr>";
-                   
-                ?>
-                
-            </table>
-        </fieldset>  
-        </form>
-       
-    </section>
+    
     <footer>
         <h6>HectorFD Copyright © 2024, todos los derechos reservados </h6>
     </footer>

@@ -9,9 +9,9 @@ while ($a <= 10) {
 }
 //* realiza un programa que imprima las tablas de multiplicar
 $b = 1;
-$numero = 8;
+$dato = 8;
 while ($b <= 12) {
-    echo $numero." x ".$b." = ".$numero * $b."<br>";
+    echo $dato." x ".$b." = ".$dato * $b."<br>";
     $b++;
 }
 //?Ciclo do while
@@ -23,7 +23,7 @@ do {
 } while ($i <= 10);
 
 //?Ciclo for
-for ($e=0; $e < $numero; $e++) { 
+for ($e=0; $e < $dato; $e++) { 
     echo $e." ";
 }
 //*mostrar los numeros pares de 0 al 50

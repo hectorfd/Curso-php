@@ -103,6 +103,7 @@ strong{
     font-size: 15px;
     text-align: left;
     padding: 10px;
+    border-radius: 10px;
 }
 #ancho3{
     width: 200px;
@@ -110,13 +111,15 @@ strong{
     font-size: 15px;
     text-align: left;
     padding: 10px;
+    border-radius: 10px;
 }
 #ancho4{
     width: 200px;
     height: 45px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: left;
     padding: 10px;
+    border-radius: 10px;
 }
 #ancho5{
     width: 40px;
@@ -124,6 +127,35 @@ strong{
     font-size: 18px;
     padding: 10px;
     text-align: center;
+    border-radius: 10px;
+}
+#ancho6{
+    width: 130px;
+    height: 45px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+#ancho7{
+    background-color: #0D152C;
+    color: #72ECB1;
+    width: 250px;
+    height: 45px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+}
+#ancho7:hover{
+    background-color: #1F3546;
+    color: #72ECB1;
+    width: 250px;
+    height: 45px;
+    font-size: 18px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
 }
 .centrar{
     text-align: center;
