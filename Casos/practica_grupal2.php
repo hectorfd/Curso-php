@@ -12,7 +12,7 @@
         <h1>Practica Grupal</h1>
         <div class="wrapper">
             <div class="select-btn">
-                <span>Funciones para Cadena</span>
+                <span>Selecciona Caso</span>
                 <i class="uil uil-angle-down"></i>
             </div>
             <div class="content">
@@ -37,7 +37,7 @@
     </section>
     <br><br>
     <section>
-        <h2>Funciones para variables</h2>
+        <h2>Funciones para Cadena</h2>
         <form action="">
             <?php
             error_reporting(0);

@@ -13,7 +13,10 @@ let casos = [
     "Control de Mensualidad",
     "Venta de entradas (Teatro)",
     "Venta de Productos Usando While",
-    "Casa de Préstamo"
+    "Casa de Préstamo",
+    "Practica Funciones para variables",
+    "Practica Funciones para Cadena",
+    "Funciones de Fecha y Hora"
 ];
 let selectedLi;
 
@@ -71,6 +74,15 @@ function actualizarNombre(selectedLi){
             break;
         case "Casa de Préstamo":
             window.location.href = 'caso10.php';
+            break;
+        case "Practica Funciones para variables":
+            window.location.href = 'practica_grupal.php';
+            break;
+        case "Practica Funciones para Cadena":
+            window.location.href = 'practica_grupal2.php';
+            break;
+        case "Funciones de Fecha y Hora":
+            window.location.href = 'practica_grupal4.php';
             break;
         
         default:
