@@ -34,22 +34,20 @@
             
             <?php
             error_reporting(0);
-            $cuotas = $_GET['txtCuotas'];
-            $cliente = $_GET['txtCliente'];
-            $monto = $_GET['txtMonto'];
+            $tipoCombustible = $_GET['txtGasolina'];
+            $cantidad = $_GET['txtCantidad'];
+            $acelerar = $_GET['txtAcelerar'];
             
             class Coche {
                 public $combustible;
                 public $deposito;
-                public $reserva;
                 public $litros;
                 // En el constructor de la clase podremos indicar el tipo de combustible que acepta el coche 
                 // (no uses una clase para el combustible, basta con una cadena de texto como "Gasolina"). 
                 // Si no se indica nada el combustible será Gasolina.
-                public function __construct($combustible = "Gasolina", $deposito = 0, $reserva = true, $litros = 0) {
+                public function __construct($combustible = "Gasolina", $deposito = 0, $litros = 0) {
                     $this->combustible = $combustible;
                     $this->deposito = $deposito;
-                    $this->reserva = $reserva;
                     $this->litros = $litros;
                 }
 
@@ -116,11 +114,11 @@
                 }
             }
 
-            $miCoche2 = new Coche('Gasoil');
-            echo "Velocidad después de acelerar con el depósito vacío: " . $miCoche2 -> acelerar(10) . "<br>";
-            echo "Combustible después de repostar con el combustible equivocado:  ".$miCoche2 -> repostar("Gasolina", 40);
-            echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche2 -> repostar("Gasoil", 40);
-            echo "Velocidad después de acelerar con combustible en el depósito: " . $miCoche2 -> acelerar(10) . "<br>";
+            $miCoche2 = new Coche("Gasoil");
+            echo "Velocidad después de acelerar con el depósito vacío: " . $miCoche2 -> acelerar($acelerar) . "<br>";
+            echo "Combustible después de repostar con el combustible equivocado:  ".$miCoche2 -> repostar($tipoCombustible, $cantidad);
+            echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche2 -> repostar("Gasoil", $cantidad);
+            echo "Velocidad después de acelerar con combustible en el depósito: " . $miCoche2 -> acelerar($acelerar) . "<br>";
             echo "Estado del coche: " . $miCoche2->obtenerEstado()."<br>";
             if ($miCoche2->obtenerEstado() == "en marcha") {
                 $marcha = 1;
@@ -140,29 +138,32 @@
             <legend>Formulario</legend>
                 <table align="center">
                     <tr>
-                        <td>Coche</td>
-                        <td><input type="text" name="txtCliente" id="ancho" value="<?php echo $cliente?>"></td>
+                        <td>Tipo Combustible</td>
+                        <td>
+                        <select name="txtGasolina">
+                            <option value="1" <?php echo $selGaso;?>>Gasolina</option>
+                            <option value="2" <?php echo $selPetro;?>>Petroleo</option>	
+                            <option value="3" <?php echo $selNafta;?>>Nafta</option>
+                            <option value="4" <?php echo $selGas;?>>Gas</option>
+                            <option value="5" <?php echo $selGasoil;?>>Gasoil</option>
+                        </select>
+                        </td>
                         <td></td>
                     </tr>
             
                 <tr>
-                    <td>Monto prestado</td>
-                    <td><input type="text" name="txtMonto" id="ancho2" value="<?php printf("%.2f", $monto); ?>"></td>
+                    <td>Cantidad Combustible</td>
+                    <td><input type="text" name="txtCantidad" id="ancho2" value="<?php echo $cantidad; ?>"></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Cuotas</td>
-                    <td>
-                        
-                    <select name="txtCuotas">
-                        
-                    </select>
-                    </td>
+                    <td>Aceleración</td>
+                    <td><input type="text" name="txtAcelerar" id="ancho2" value="<?php echo $acelerar; ?>"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" id="button" value="Cotizar"></td>
+                    <td><input type="submit" id="button" value="Resultado"></td>
                     <td></td>
                 </tr>
             
@@ -172,27 +173,25 @@
                 <legend><h3>Resultado</h3></legend>
             <table align = "center">
                 <tr>
-                    <td>N de Cuota</td>
-                    <td>fechas de pago</td>
-                    <td>Monto mensual</td>
+                    <td>Combustible</td>
+                    <td>Deposito</td>
+                    <td>Estado</td>
                 </tr>
                 
                 <?php
-                    $monto = $monto + $impuesto;
-                    $fecha = date("d-m-Y");
-                    for ($i=1; $i <= $cuotas ; $i++) { 
+                    $miCoche = new Coche('Gasoil');
                         echo "<tr>";
                             echo "<td>";
-                            echo $i." cuota";
+                            echo $miCoche -> mostrarTipoCombustible();
                             echo "</td>";
                             echo "<td>";
-                            echo date("d-m-Y", strtotime("+$i month", strtotime($fecha)));
+                            echo $miCoche ->litros = $litros;
                             echo "</td>";
                             echo "<td>";
-                            printf("S/. %.2f", ($monto/$cuotas));
+                            echo $miCoche->obtenerEstado();
                             echo "</td>";
                         echo "</tr>";
-                    }
+                    
                 ?>
                 
             </table>
