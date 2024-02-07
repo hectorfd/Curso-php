@@ -30,7 +30,8 @@
     <section>
         <h2>Clase Coche</h2>
         <form action="">
-            <div class="centrar"><img src="../../images/coche.gif" alt="" width="40%"></div>
+            
+            
             <?php
             error_reporting(0);
             $cuotas = $_GET['txtCuotas'];
@@ -103,8 +104,7 @@
                 
                     return $velocidadFinal;
                 }
-                
-
+        
                 public function repostar($combustible, $llenar) {
                     if ($this->combustible == $combustible) {
                         $this->litros += $llenar;
@@ -122,16 +122,25 @@
             echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche2 -> repostar("Gasoil", 40);
             echo "Velocidad después de acelerar con combustible en el depósito: " . $miCoche2 -> acelerar(10) . "<br>";
             echo "Estado del coche: " . $miCoche2->obtenerEstado()."<br>";
-            
-            
-
-
+            if ($miCoche2->obtenerEstado() == "en marcha") {
+                $marcha = 1;
+            }
             ?>
+            <div class="centrar"><img id="myImagen" src="../../images/coche.gif" alt="" width="400px"></div>
+            <script>
+            var marcha = <?php echo $marcha; ?>;
+            if (marcha == 1) {
+                document.getElementById("myImagen").src = "../../images/coche.gif";
+            } else {
+                document.getElementById("myImagen").src = "../../images/coche_stopped.gif";
+            }
+            </script>
+            
             <fieldset>
             <legend>Formulario</legend>
                 <table align="center">
                     <tr>
-                        <td>Cliente</td>
+                        <td>Coche</td>
                         <td><input type="text" name="txtCliente" id="ancho" value="<?php echo $cliente?>"></td>
                         <td></td>
                     </tr>
