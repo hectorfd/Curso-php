@@ -81,7 +81,7 @@
                 //El coche comienza estando parado y con el depósito vacío.
                 //Saber si el coche está parado o en marcha (si velocidad es mayor que cero estará en marcha)
                 public function obtenerEstado() {
-                    return ($this->estado == 0) ? "parado" : "en marcha";
+                    return ($this->litros == 0) ? "parado" : "en marcha";
                 }
 
                 //Si el coche está en la reserva (le quedan menos de 10 litros de combustible) 
@@ -140,9 +140,9 @@
             echo "Combustible después de repostar con el combustible equivocado:  ".$miCoche2 -> repostar("Gasolina", 40);
             echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche2 -> repostar("Gasoil", 40);
             echo "Velocidad después de acelerar con combustible en el depósito: " . $miCoche2 -> acelerar(10) . "<br>";
-            echo "Estado del coche: " . $miCoche2->obtenerEstado();
+            echo "Estado del coche: " . $miCoche2->obtenerEstado()."<br>";
             echo $miCoche2 -> mostrarTipoCombustible();
-            echo $miCoche2 -> 
+            
 
 
             ?>
