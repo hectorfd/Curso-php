@@ -42,11 +42,7 @@
             <?php
             error_reporting(0);
             $lista = $_GET['txtLista'];
-            $variable = $_GET['txtVariable'];
-            
-
-            
-           
+            $variable = $_GET['txtVariable']; 
        
             switch ($lista) {
                 case '1':

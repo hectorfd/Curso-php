@@ -70,6 +70,12 @@
                 if (strpos($variable, "!=") !== false) {
                     $dato = (boolean)$variable;
                 }
+                if (strpos($variable, "true") !== false) {
+                    $dato = (boolean)$variable;
+                }
+                if (strpos($variable, "false") !== false) {
+                    $dato = (boolean)$variable;
+                }
             }
             
             

@@ -46,14 +46,13 @@
             $lista = $_GET['txtLista'];
             $fecha = $_GET['txtFecha'];
             $hora = $_GET['txtHora'];
-
        
-            switch ($lista) {
+            switch ($lista){
                 case '1':
-                    $funcion = 'Función strlen';
+                    $funcion = 'Función date';
                     $fechaActual = date("Y-m-d");
                     $horaActual = date("H:i:s");
-                    $descripción = 'muestra la fecha y actual';
+                    $descripción = 'muestra la fecha y hora actual';
                     $resultado = date("d-m-Y") .' - '.$horaActual;
                     $sel1 = "selected";
                     $nombre='date';
@@ -72,7 +71,6 @@
                     break;
                 case '3':
                     $funcion = 'Función checkdate';
-                    
                     $descripción = 'verifica si es un año Gregoriano';
                     $sel3 = "selected";
                     $nombre='text';
