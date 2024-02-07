@@ -28,33 +28,14 @@
         
     </nav>
     <section>
-        <h2>Casa de Préstamo</h2>
+        <h2>Clase Coche</h2>
         <form action="">
-            <div class="centrar"><img src="../images/prestamos.png" alt="" width="40%"></div>
+            <div class="centrar"><img src="../../images/coche.gif" alt="" width="40%"></div>
             <?php
             error_reporting(0);
             $cuotas = $_GET['txtCuotas'];
             $cliente = $_GET['txtCliente'];
             $monto = $_GET['txtMonto'];
-
-            switch ($cuotas) {
-                case '3':
-                    $impuesto = ($monto * 0.05); 
-                    break;
-                case '6':
-                    $impuesto = ($monto * 0.07);
-                    break;
-                case '9':
-                    $impuesto = ($monto * 0.1);
-                    break;
-                case '12':
-                    $impuesto = ($monto * 0.2);
-                    break;
-                default:
-                    $impuesto = 1;
-                    break;
-            }
-
             
             class Coche {
                 public $combustible;
@@ -81,7 +62,7 @@
                 //El coche comienza estando parado y con el depósito vacío.
                 //Saber si el coche está parado o en marcha (si velocidad es mayor que cero estará en marcha)
                 public function obtenerEstado() {
-                    return ($this->litros == 0) ? "parado" : "en marcha";
+                    return ($this->litros <= 0) ? "parado" : "en marcha";
                 }
 
                 //Si el coche está en la reserva (le quedan menos de 10 litros de combustible) 
@@ -141,7 +122,7 @@
             echo "Combustible después de echar 40 litros de gasóleo: " . $miCoche2 -> repostar("Gasoil", 40);
             echo "Velocidad después de acelerar con combustible en el depósito: " . $miCoche2 -> acelerar(10) . "<br>";
             echo "Estado del coche: " . $miCoche2->obtenerEstado()."<br>";
-            echo $miCoche2 -> mostrarTipoCombustible();
+            
             
 
 
