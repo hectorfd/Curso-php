@@ -169,3 +169,12 @@ img{
     border-radius: 20px;
     
 }
+#myImagen {
+    position: relative;
+    left: 150px;
+}
+.container {
+    width: 700px;
+    height: 200px;
+    overflow: hidden;
+}
